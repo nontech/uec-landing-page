@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: 'assets/images/uploads'
+public_folder: '/images/uploads'
+
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'Home'
+        name: 'home'
+        file: 'index.html'
+        fields:
+          - { label: 'Hero Title', name: 'hero_title', widget: 'string' }
+          - {
+              label: 'Hero Description',
+              name: 'hero_description',
+              widget: 'text',
+            }
+          - { label: 'Hero Image', name: 'hero_image', widget: 'image' }
+          - label: 'Features'
+            name: 'features'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Description', name: 'description', widget: 'text' }
+              - { label: 'Icon', name: 'icon', widget: 'image' }
